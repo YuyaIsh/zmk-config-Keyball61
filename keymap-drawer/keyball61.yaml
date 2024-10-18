@@ -57,8 +57,8 @@ layers:
   - snipe
   - {t: '$$mdi:keyboard-space$$', h: mouse}
   - scroll
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', h: symbol}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-return$$', h: symbol}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:backspace-reverse-outline$$
   number:
