@@ -34,18 +34,18 @@
 &kp TAB           &kp Q         &kp W         &kp E         &kp R   &kp T                                               &kp Y        &kp U   &kp I      &kp O    &kp P          &kp BACKSLASH
 &kp ENTER         &kp A         &kp S         &kp D         &kp F   &kp G                                               &kp H        &kp J   &kp K      &kp L    &kp SEMI       &kp SQT
 &kp LEFT_SHIFT    &kp Z         &kp X         &kp C         &kp V   &kp B        &kp INT_MUHENKAN  &kp INTERNATIONAL_4  &lt 2 N      &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &mo 6   &lt 1 SPACE  &mo 5             &kp BACKSPACE        &lt 4 ENTER                              &kp RIGHT_ALT  &kp DELETE
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &mo 3   &lt 1 SPACE  &mo 5             &kp BACKSPACE        &lt 4 ENTER                              &kp RIGHT_ALT  &kp DELETE
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans    &trans    &trans     &trans  &trans                  &trans               &trans     &trans     &trans     &trans  &trans
-&trans  &trans    &kp UP    &trans     &trans  &trans                  &kp LA(RIGHT_ARROW)  &kp PG_UP  &mkp MCLK  &kp PG_DN  &trans  &trans
-&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans                  &kp LA(LEFT_ARROW)   &mkp LCLK  &mkp RCLK  &kp LCTRL  &trans  &trans
-&trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans               &trans     &trans     &trans     &trans  &trans
-&trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &mo 3                                                 &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans                  &trans               &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans    &kp UP    &trans     &trans                  &kp LA(RIGHT_ARROW)  &kp PG_UP  &mkp MCLK  &kp PG_DN  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans                  &kp LA(LEFT_ARROW)   &mkp LCLK  &mkp RCLK  &kp LCTRL  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans               &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans  &trans  &trans  &mo 3                                                 &trans  &trans
             >;
         };
 
