@@ -35,7 +35,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - +
+  - ':'
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -49,7 +49,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: ']', s: '}'}
+  - {t: \, s: '|'}
   - $$mdi:apple-keyboard-control$$
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
@@ -433,3 +433,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [60, 49]
+  k: _
+  l: [default]
