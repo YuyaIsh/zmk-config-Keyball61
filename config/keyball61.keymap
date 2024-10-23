@@ -27,18 +27,18 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        virtual_window_left: virtual_window_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LC(LEFT_WIN) &kp LEFT_ARROW>;
-            label = "VIRTUAL_WINDOW_LEFT";
-        };
-
         virtual_window_right: virtual_window_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LC(LEFT_WIN) &kp RIGHT_ARROW>;
             label = "VIRTUAL_WINDOW_RIGHT";
+        };
+
+        virtual_window_left: virtual_window_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LC(LEFT_WIN) &kp LEFT_ARROW>;
+            label = "VIRTUAL_WINDOW_LEFT";
         };
     };
 
