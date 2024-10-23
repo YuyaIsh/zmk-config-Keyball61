@@ -24,7 +24,7 @@ layers:
   - O
   - P
   - '@'
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -36,7 +36,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - ':'
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
@@ -50,10 +50,10 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-control$$
+  - '&virtual_window_left'
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&virtual_window_right'
   - {t: HOME, h: function}
   - {t: '$$mdi:keyboard-space$$', h: mouse}
   - {t: END, h: symbol}
