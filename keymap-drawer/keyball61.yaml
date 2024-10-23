@@ -53,7 +53,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&virtual_window_left'
   - {t: HOME, h: function}
   - {t: '$$mdi:keyboard-space$$', h: mouse}
   - {t: END, h: symbol}
