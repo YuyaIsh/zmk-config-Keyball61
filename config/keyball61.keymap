@@ -37,7 +37,7 @@
         virtual_window_left: virtual_window_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LC(LEFT_WIN) &kp LEFT_ARROW>;
+            bindings = <&sk LC(LEFT_WIN) &kp LEFT>;
             label = "VIRTUAL_WINDOW_LEFT";
         };
     };
