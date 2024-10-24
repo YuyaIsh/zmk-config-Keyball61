@@ -59,11 +59,11 @@
         mouse_arrow_layer {
             label = "MOUSE_ARROW";
             bindings = <
-&trans  &trans     &trans       &trans     &trans           &trans                     &trans               &trans     &trans     &trans     &trans  &trans
-&trans  &trans     &kp LC(TAB)  &kp UP     &kp LS(LC(TAB))  &trans                     &kp LA(RIGHT_ARROW)  &kp PG_UP  &mkp MCLK  &kp PG_DN  &trans  &trans
-&trans  &trans     &kp LEFT     &kp DOWN   &kp RIGHT        &trans                     &kp LA(LEFT_ARROW)   &mkp LCLK  &mkp RCLK  &kp LCTRL  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(Y)    &kp LC(X)  &kp LC(C)        &kp LC(V)  &trans  &trans  &trans               &trans     &trans     &trans     &trans  &trans
-&trans  &trans     &trans       &trans     &trans           &trans     &trans  &trans  &mo 0                                                 &trans  &trans
+&trans  &trans     &trans           &trans     &trans       &trans                     &trans               &trans     &trans     &trans     &trans  &trans
+&trans  &trans     &kp LC(LS(TAB))  &kp UP     &kp LC(TAB)  &trans                     &kp LA(RIGHT_ARROW)  &kp PG_UP  &mkp MCLK  &kp PG_DN  &trans  &trans
+&trans  &trans     &kp LEFT         &kp DOWN   &kp RIGHT    &trans                     &kp LA(LEFT_ARROW)   &mkp LCLK  &mkp RCLK  &kp LCTRL  &trans  &trans
+&trans  &kp LC(Z)  &kp LC(Y)        &kp LC(X)  &kp LC(C)    &kp LC(V)  &trans  &trans  &trans               &trans     &trans     &trans     &trans  &trans
+&trans  &trans     &trans           &trans     &trans       &trans     &trans  &trans  &mo 0                                                 &trans  &trans
             >;
         };
 
