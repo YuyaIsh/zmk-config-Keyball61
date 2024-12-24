@@ -24,84 +24,80 @@
 };
 
 / {
+    combos { compatible = "zmk,combos"; };
+
+    macros {
+        virtual_window_right: virtual_window_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LC(LEFT_WIN) &kp RIGHT_ARROW>;
+            label = "VIRTUAL_WINDOW_RIGHT";
+        };
+
+        virtual_window_left: virtual_window_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LC(LEFT_WIN) &kp LEFT>;
+            label = "VIRTUAL_WINDOW_LEFT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "QWRT";
             bindings = <
-&kp ESC         &kp N1     &kp N2        &kp N3        &kp N4  &kp N5                                   &kp N6           &kp N7  &kp N8     &kp N9   &kp N0         &kp BSPC
-&kp TAB         &kp Q      &kp W         &kp E         &kp R   &kp T                                    &kp Y            &kp U   &kp I      &kp O    &kp P          &kp BACKSLASH
-&kp CAPS        &kp A      &kp S         &kp D         &kp F   &kp G                                    &kp H            &kp J   &kp K      &kp L    &kp SEMI       &kp SQT
-&kp LEFT_SHIFT  &kp Z      &kp X         &kp C         &kp V   &kp B        &kp PAGE_DOWN  &kp PAGE_UP  &kp N            &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
-&none           &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &mo 6   &lt 4 SPACE  &mo 5          &kp ENTER    &lt 2 BACKSPACE                              &kp RIGHT_ALT  &kp DELETE
+&kp ESC    &kp N1        &kp N2        &kp N3                &kp N4      &kp N5                                    &kp N6       &kp N7  &kp N8     &kp N9   &kp N0    &kp DEL
+&kp TAB    &kp Q         &kp W         &kp E                 &kp R       &kp T                                     &kp Y        &kp U   &kp I      &kp O    &kp P     &kp AT_SIGN
+&kp RET    &kp A         &kp S         &kp D                 &kp F       &kp G                                     &kp H        &kp J   &kp K      &kp L    &kp SEMI  &kp COLON
+&kp LSHFT  &kp Z         &kp X         &kp C                 &kp V       &kp B        &kp LEFT_ALT  &kp RIGHT_ALT  &lt 2 N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &virtual_window_left  &lt 2 HOME  &lt 1 SPACE  &lt 4 END     &kp BACKSPACE  &lt 3 ENTER                              &kp DEL   &kp RET
             >;
         };
 
-        number_layer {
+        mouse_arrow_layer {
+            label = "MOUSE_ARROW";
             bindings = <
-&trans  &kp N1    &kp N2    &kp N3  &kp N4     &kp N5                  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans    &trans    &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &trans                          &trans  &trans
+&trans         &none      &none            &none      &none        &none                      &none                &none      &none      &none      &none           &trans
+&trans         &none      &kp LC(LS(TAB))  &kp UP     &kp LC(TAB)  &kp LC(T)                  &kp LA(RIGHT_ARROW)  &kp PG_UP  &mkp MCLK  &kp PG_DN  &msc SCRL_UP    &none
+&kp LC(ENTER)  &none      &kp LEFT         &kp DOWN   &kp RIGHT    &none                      &kp LA(LEFT_ARROW)   &mkp LCLK  &mkp RCLK  &kp LCTRL  &msc SCRL_DOWN  &none
+&trans         &kp LC(Z)  &kp LC(X)        &kp LC(C)  &kp LC(V)    &kp LC(Y)  &trans  &trans  &none                &none      &none      &none      &none           &none
+&trans         &trans     &trans           &trans     &trans       &none      &trans  &trans  &trans                                                &trans          &trans
+            >;
+        };
+
+        number_function_layer {
+            bindings = <
+&trans  &trans  &trans   &trans                &trans   &trans                  &trans  &kp N7        &kp N8  &kp N9  &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3                &kp F4   &trans                  &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
+&trans  &kp F5  &kp F6   &kp F7                &kp F8   &trans                  &trans  &kp N1        &kp N2  &kp N3  &trans  &trans
+&trans  &kp F9  &kp F10  &kp F11               &kp F12  &trans  &trans  &trans  &trans  &kp NUMBER_0  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &virtual_window_left  &trans   &trans  &trans  &trans  &trans                                &trans  &trans
             >;
 
-            label = "NUM";
+            label = "NUM_FUNC";
         };
 
         symbol_layer {
             label = "SYM";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                  &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &trans           &trans        &trans        &trans        &trans                       &trans          &trans         &trans            &trans                &trans                 &trans
-&trans  &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                       &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans                 &trans
-&trans  &trans           &trans        &trans        &trans        &trans       &trans  &trans  &kp UNDERSCORE  &kp PLUS       &trans            &trans                &trans                 &trans
-&trans  &trans           &trans        &trans        &trans        &trans       &trans  &trans  &trans                                                                 &trans                 &trans
+&trans  &trans           &trans             &trans                 &trans      &trans                       &trans         &trans     &trans                &trans                 &trans        &trans
+&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH               &kp DOLLAR  &kp PERCENT                  &kp AMPERSAND  &kp SQT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE      &kp GRAVE
+&trans  &trans           &trans             &trans                 &trans      &trans                       &kp MINUS      &kp EQUAL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS      &kp ASTRK
+&trans  &trans           &trans             &trans                 &trans      &trans       &trans  &trans  &kp CARET      &kp TILDE  &kp LS(LBRC)          &kp LS(RBRC)           &kp QUESTION  &kp UNDER
+&trans  &trans           &trans             &virtual_window_right  &trans      &trans       &trans  &trans  &trans                                                                 &trans        &trans
             >;
         };
 
-        function_layer {
-            label = "FUN";
+        bt_layer {
+            label = "bt";
             bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                          &trans  &trans
-            >;
-        };
-
-        mouse_layer {
-            label = "MOUSE";
-            bindings = <
-&trans  &trans    &trans    &trans  &trans     &trans                  &trans         &trans     &trans  &trans     &trans     &trans
-&trans  &trans    &trans    &trans  &trans     &trans                  &trans         &trans     &trans  &trans     &trans     &trans
-&trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans                  &kp PAGE_UP    &mkp LCLK  &trans  &mkp RCLK  &mkp MCLK  &trans
-&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &kp PAGE_DOWN  &trans     &trans  &trans     &trans     &trans
-&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &mo 3                                        &trans     &trans
-            >;
-        };
-
-        scroll_layer {
-            label = "SCROLL";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
-            >;
-        };
-
-        snipe_layer {
-            label = "SNIPE";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans                          &trans  &trans
             >;
         };
     };
