@@ -80,11 +80,11 @@ layers:
   - $$mdi:arrow-up-bold$$
   - Ctl+$$mdi:keyboard-tab$$
   - Ctl+T
-  - $$mdi:pan-up$$
-  - PG UP
-  - $$mdi:mouse-scroll-wheel$$
-  - PG DN
   - Alt+$$mdi:arrow-right-bold$$
+  - $$mdi:pan-up$$
+  - $$mdi:mouse-scroll-wheel$$
+  - $$mdi:pan-down$$
+  - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: 'Ctl+$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -92,11 +92,11 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:pan-down$$
+  - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:apple-keyboard-control$$
-  - Alt+$$mdi:arrow-left-bold$$
+  - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Z
