@@ -6,10 +6,12 @@
 #define SNIPE   5
 
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -59,11 +61,11 @@
         mouse_arrow_layer {
             label = "MOUSE_ARROW";
             bindings = <
-&trans         &none      &none            &none      &none        &none                      &none           &none      &none      &none      &none          &trans
-&trans         &none      &kp LC(LS(TAB))  &kp UP     &kp LC(TAB)  &kp LC(T)                  &msc SCRL_UP    &kp PG_UP  &mkp MCLK  &kp PG_DN  &kp LA(RIGHT)  &none
-&kp LC(ENTER)  &none      &kp LEFT         &kp DOWN   &kp RIGHT    &none                      &msc SCRL_DOWN  &mkp LCLK  &mkp RCLK  &kp LCTRL  &kp LA(LEFT)   &none
-&trans         &kp LC(Z)  &kp LC(X)        &kp LC(C)  &kp LC(V)    &kp LC(Y)  &trans  &trans  &none           &none      &none      &none      &none          &none
-&trans         &trans     &trans           &trans     &trans       &none      &trans  &trans  &trans                                           &trans         &trans
+&trans         &none      &none            &none      &none        &none                      &none          &none         &none      &none           &none     &trans
+&trans         &none      &kp LC(LS(TAB))  &kp UP     &kp LC(TAB)  &kp LC(T)                  &kp LA(RIGHT)  &msc SCRL_UP  &mkp MCLK  &msc SCRL_DOWN  &kp HOME  &none
+&kp LC(ENTER)  &none      &kp LEFT         &kp DOWN   &kp RIGHT    &none                      &kp LA(LEFT)   &mkp LCLK     &mkp RCLK  &kp LCTRL       &kp END   &none
+&trans         &kp LC(Z)  &kp LC(X)        &kp LC(C)  &kp LC(V)    &kp LC(Y)  &trans  &trans  &none          &none         &none      &none           &none     &none
+&trans         &trans     &trans           &trans     &trans       &none      &trans  &trans  &trans                                                  &trans    &trans
             >;
         };
 
