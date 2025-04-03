@@ -86,7 +86,7 @@ layers:
   - I
   - O
   - P
-  - Sft+Gui+H
+  - {t: '[', s: '{'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - A
   - S
@@ -98,7 +98,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - Sft+Gui+J
+  - ':'
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -112,9 +112,9 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - Sft+Gui+A
-  - LEFT WIN
+  - Ins
   - $$mdi:apple-keyboard-control$$
+  - LEFT WIN
   - $$mdi:apple-keyboard-option$$
   - '&virtual_window_left'
   - {t: HOME, h: NUM_FUNC}
@@ -209,7 +209,7 @@ layers:
   - '&'
   - {t: Sft+8, s: Sft+*}
   - {t: Sft+9, s: Sft+(}
-  - Sft+Gui+L
+  - PgUp
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -221,7 +221,7 @@ layers:
   - _
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
-  - '*'
+  - ':'
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -233,10 +233,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '=', s: +}
   - '~'
-  - '|'
+  - +
   - Sft+{
   - '?'
-  - {t: Sft+Gui+;, s: 'Sft+Gui+:'}
+  - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
