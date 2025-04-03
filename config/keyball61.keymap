@@ -69,19 +69,19 @@
             >;
         };
 
-        /* mac 用: Windows 層の内容を ISO 規格に補正したもの */
+        /* mac_default_layer: Windows 層の内容を ISO 規格に補正した mac 用 */
         mac_default_layer {
             label = "MAC_DEFAULT";
             bindings = <
                 &kp ESC    &kp N1        &kp N2        &kp N3                &kp N4      &kp N5                                    &kp N6       &kp N7  &kp N8     &kp N9   &kp N0    &kp DEL
-                &kp TAB    &kp Q         &kp W         &kp E                 &kp R       &kp T                                     &kp Y        &kp U   &kp I      &kp O    &kp P     &kp LS(N2)        /* AT_SIGN → LS(N2) */
-                &kp RET    &kp A         &kp S         &kp D                 &kp F       &kp G                                     &kp H        &kp J   &kp K      &kp L    &kp SEMI  &kp LS(SEMI)      /* COLON → LS(SEMI) */
-                &kp LSHFT  &kp Z         &kp X         &kp C                 &kp V       &kp B        &kp LEFT_ALT  &kp RIGHT_ALT  &lt 2 N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH        /* BACKSLASH → BSLH */
+                &kp TAB    &kp Q         &kp W         &kp E                 &kp R       &kp T                                     &kp Y        &kp U   &kp I      &kp O    &kp P     &kp LS(N2)
+                &kp RET    &kp A         &kp S         &kp D                 &kp F       &kp G                                     &kp H        &kp J   &kp K      &kp L    &kp SEMI  &kp LS(SEMI)
+                &kp LSHFT  &kp Z         &kp X         &kp C                 &kp V       &kp B        &kp LEFT_ALT  &kp RIGHT_ALT  &lt 2 N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
                 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &virtual_window_left  &lt 2 HOME  &lt 1 SPACE  &lt 4 END     &kp BACKSPACE  &lt 3 ENTER                              &kp DEL   &kp RET
             >;
         };
 
-        /* mac 用記号レイヤー: symbol_layer の内容を ISO 規格に補正したもの */
+        /* mac_symbol_layer: Windows 記号層の内容を ISO 規格に補正した mac 用 */
         mac_symbol_layer {
             label = "MAC_SYM";
             bindings = <
@@ -94,19 +94,17 @@
         };
 
         /* bt_layer: Bluetooth 接続先による自動レイヤー切替
-           bt0, bt1 → Windows 用 (default_layer, symbol_layer)
-           bt4         → mac 用 (mac_default_layer, mac_symbol_layer)
-           ※ set_layer() マクロは括弧付き記法を使用 */
+           bt0, bt1  → Windows 用 (default_layer, symbol_layer)
+           bt4       → mac 用 (mac_default_layer, mac_symbol_layer) */
         bt_layer {
             label = "bt";
             bindings = <
-                &bt BT_SEL 0   &set_layer(default_layer)
-                &bt BT_SEL 1   &set_layer(default_layer)
-                &bt BT_SEL 4   &set_layer(mac_default_layer)
+                &bt BT_SEL 0   &set_layer default_layer
+                &bt BT_SEL 1   &set_layer default_layer
+                &bt BT_SEL 4   &set_layer mac_default_layer
             >;
         };
 
-        /* 以下は元のレイヤーそのまま */
         mouse_arrow_layer {
             label = "MOUSE_ARROW";
             bindings = <
