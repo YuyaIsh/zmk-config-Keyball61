@@ -98,7 +98,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - ':'
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
