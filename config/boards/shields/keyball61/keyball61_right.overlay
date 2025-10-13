@@ -108,6 +108,20 @@
     };
 };
 
+&hold_tap {
+  // タップを優先。割り込み（次キー）でホールドに化けにくくする
+  flavor = "tap-preferred";
+
+  // 離せばタップ扱いに“戻す”。後続キーで割り込んでもタップにできる
+  retro-tap = <true>;
+
+  // タップとして認める猶予。誤ホールドが多いなら“少し長め”に
+  tapping-term-ms = <200>;   // 例: 180–230の範囲で好みに詰める
+
+  // 連打のタップ判定を素早くしたいなら短めに（任意）
+  quick-tap-ms = <150>;
+}
+
 / {
   trackball_listener {
     compatible = "zmk,input-listener";
