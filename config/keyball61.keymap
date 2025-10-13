@@ -13,9 +13,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
+    retro-tap = <true>;         // 離したらタップ確定（割込みでhold化しにくい）
+    tapping-term-ms = <200>;    // 240→200に少し短縮（好みに±20ms刻みで調整）
+    flavor = "tap-preferred";   // タップ優先で割込みに強くする
+    quick-tap-ms = <150>;       // 連打を軽快に（そのままでOK）
 };
 
 &mt {
