@@ -13,7 +13,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &lt {
-    retro-tap;
     tapping-term-ms = <200>;
     flavor = "tap-preferred";
     quick-tap-ms = <150>;
