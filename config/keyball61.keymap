@@ -83,7 +83,7 @@
             label = "MAC_SYM";
             bindings = <
 &trans  &trans           &trans       &trans     &trans      &trans                       &trans      &trans         &trans                 &trans             &trans        &trans
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                  &kp LS(N6)  &kp AMPERSAND  &kp LS(N8)             &kp LS(N9)         &kp LS(F20)   &kp GRAVE
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                  &kp LS(N6)  &kp AMPERSAND  &kp LS(N8)             &kp LS(N9)         &kp LS(INT3)  &kp GRAVE
 &trans  &trans           &trans       &kp LC(D)  &trans      &trans                       &kp MINUS   &kp UNDER      &kp RIGHT_BRACKET      &kp BACKSLASH      &kp COLON     &kp DOUBLE_QUOTES
 &trans  &trans           &trans       &trans     &trans      &trans       &trans  &trans  &kp EQUAL   &kp TILDE      &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &kp QUESTION  &kp INT1
 &trans  &trans           &trans       &trans     &trans      &trans       &trans  &trans  &trans                                                               &trans        &trans
