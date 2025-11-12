@@ -209,7 +209,7 @@ layers:
   - '&'
   - {t: Sft+8, s: Sft+*}
   - {t: Sft+9, s: Sft+(}
-  - PgUp
+  - Sft+F20
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -233,10 +233,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '=', s: +}
   - '~'
-  - +
-  - Sft+{
+  - {t: 'Sft+]', s: 'Sft+}'}
+  - {t: Sft+\, s: Sft+|}
   - '?'
-  - PgDn
+  - INT1
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -489,10 +489,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: def, h: toggle}
