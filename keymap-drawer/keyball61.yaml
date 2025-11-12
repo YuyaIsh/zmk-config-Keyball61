@@ -209,7 +209,7 @@ layers:
   - '&'
   - {t: Sft+8, s: Sft+*}
   - {t: Sft+9, s: Sft+(}
-  - Sft+F20
+  - Sft+INT3
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
