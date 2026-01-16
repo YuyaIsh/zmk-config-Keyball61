@@ -126,14 +126,24 @@
 
         minecraft {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &to 0
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp SPACE  &trans  &trans  &trans                          &trans  &to 0
+&trans  &trans    &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &to 0
+&trans  &trans    &kp Q   &kp W   &kp E   &kp R                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N4    &kp A   &kp S   &kp D   &kp F                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB3  &kp X   &kp C   &kp V   &kp B      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans  &trans  &kp N8  &kp SPACE  &kp N9  &trans  &trans                          &trans  &to 0
             >;
 
             label = "minecraft";
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
+            >;
         };
     };
 };
