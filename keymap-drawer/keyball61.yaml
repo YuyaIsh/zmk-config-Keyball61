@@ -511,7 +511,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Q
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+R
   - Ctl+T
