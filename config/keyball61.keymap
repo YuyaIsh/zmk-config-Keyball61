@@ -139,7 +139,7 @@
         lefthand_control {
             bindings = <
 &trans  &trans  &trans     &trans  &trans         &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans  &kp LC(R)      &kp LC(T)                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(Q)  &trans  &kp LC(R)      &kp LC(T)                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LC(S)  &trans  &kp LC(F)      &kp LC(G)                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans  &kp LC(LS(V))  &kp LC(B)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans  &trans         &trans     &trans  &trans  &trans                          &trans  &trans
